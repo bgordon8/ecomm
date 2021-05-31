@@ -8,23 +8,34 @@ class UsersRepository {
 
     this.filename = filename;
     try {
-      fs.accessSyn(this.filename);
+      fs.accessSync(this.filename);
     } catch (err) {
       fs.writeFileSync(this.filename, "[]");
     }
   }
+
   async getAll() {
     return JSON.parse(
-      await fs.promises.readFile(this.filename, {
-        encoding: "utf8",
-      })
+      await fs.promises.readFile(this.filename, { encoding: "utf8" })
     );
   }
+
+  async create(attributes) {
+    const records = await this.getAll();
+    records.push(attributes);
+
+    await fs.promises.writeFile(this.filename, JSON.stringify(records));
+  }
 }
+
 const test = async () => {
   const repo = new UsersRepository("users.json");
+
+  await repo.create({ email: "test@email.com", password: "password" });
+
   const users = await repo.getAll();
 
   console.log(users);
 };
+
 test();
