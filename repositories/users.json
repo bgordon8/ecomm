@@ -1,42 +1,12 @@
 [
   {
     "email": "test@email.com",
-    "password": "password"
+    "password": "password",
+    "id": "9f60934e"
   },
   {
     "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
-  },
-  {
-    "email": "test@email.com",
-    "password": "password"
+    "password": "password",
+    "id": "ae0e52a8"
   }
 ]
