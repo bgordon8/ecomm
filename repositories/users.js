@@ -50,6 +50,11 @@ class UsersRepository {
     const filteredRecords = records.filter((record) => record.id !== id);
     await this.writeAll(filteredRecords);
   }
+
+  async update(id, attrs) {
+    const records = this.getAll();
+    const record = records.find((record) => record.id === id);
+  }
 }
 
 const test = async () => {
