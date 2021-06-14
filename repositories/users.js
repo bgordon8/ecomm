@@ -51,16 +51,22 @@ class UsersRepository {
     await this.writeAll(filteredRecords);
   }
 
-  async update(id, attrs) {
-    const records = this.getAll();
+  async update(id, attributes) {
+    const records = await this.getAll();
+    console.log(records);
     const record = records.find((record) => record.id === id);
+    if (!record) {
+      throw new Error("Record not found");
+    }
+    Object.assign(record, attributes);
+    await this.writeAll(records);
   }
 }
 
 const test = async () => {
   const repo = new UsersRepository("users.json");
 
-  await repo.delete("2439c6bf");
+  await repo.update("9fsdlf9", { password: "newPassword" });
 };
 
 test();
