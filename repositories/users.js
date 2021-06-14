@@ -64,13 +64,28 @@ class UsersRepository {
 
   async getOneBy(filters) {
     const records = await this.getAll();
+    for (let record of records) {
+      let found = true;
+
+      for (let key in filters) {
+        if (record[key] !== filters[key]) {
+          found = false;
+        }
+      }
+      if (found) {
+        return record;
+      }
+    }
   }
 }
 
-const test = async () => {
-  const repo = new UsersRepository("users.json");
+module.exports = new UsersRepository("users.json");
 
-  await repo.update("9fsdlf9", { password: "newPassword" });
-};
+// const test = async () => {
+//   const repo = new UsersRepository("users.json");
 
-test();
+//   const user = await repo.getOneBy({ password: "newPassword" });
+//   console.log(user);
+// };
+
+// test();
