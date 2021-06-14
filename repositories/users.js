@@ -61,6 +61,10 @@ class UsersRepository {
     Object.assign(record, attributes);
     await this.writeAll(records);
   }
+
+  async getOneBy(filters) {
+    const records = await this.getAll();
+  }
 }
 
 const test = async () => {
