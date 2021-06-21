@@ -53,7 +53,6 @@ class UsersRepository {
 
   async update(id, attributes) {
     const records = await this.getAll();
-    console.log(records);
     const record = records.find((record) => record.id === id);
     if (!record) {
       throw new Error("Record not found");

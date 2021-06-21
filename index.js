@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const usersRepo = require("./repositories/users");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+  const { email, password, passwordConformation } = req.body;
   console.log(req.body);
   res.send("Account created!!");
 });
