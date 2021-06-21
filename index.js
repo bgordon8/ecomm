@@ -19,12 +19,15 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.post("/", (req, res) => {
+app.post("/", async (req, res) => {
   const { email, password, passwordConformation } = req.body;
-  const existingUser = await usersRepo.getOneBy({ email })
+  const existingUser = await usersRepo.getOneBy({ email });
+  if (existingUser) {
+    return res.send("Email already exists");
+  }
 
-  console.log(req.body);
   res.send("Account created!!");
+  console.log(req.body);
 });
 
 app.listen(3000, () => {
