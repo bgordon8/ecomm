@@ -22,12 +22,14 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res) => {
   const { email, password, passwordConformation } = req.body;
   const existingUser = await usersRepo.getOneBy({ email });
+
   if (existingUser) {
     return res.send("Email already exists");
   }
-
+  if (password.value !== passwordConformation.value) {
+    res.send("Passwords must match");
+  }
   res.send("Account created!!");
-  console.log(req.body);
 });
 
 app.listen(3000, () => {
