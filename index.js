@@ -21,6 +21,8 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const { email, password, passwordConformation } = req.body;
+  const existingUser = await usersRepo.getOneBy({ email })
+
   console.log(req.body);
   res.send("Account created!!");
 });
