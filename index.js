@@ -26,9 +26,10 @@ app.post("/", async (req, res) => {
   if (existingUser) {
     return res.send("Email already exists");
   }
-  if (password.value !== passwordConformation.value) {
+  if (password !== passwordConformation) {
     res.send("Passwords must match");
   }
+  const user = await usersRepo.create({ email, password });
   res.send("Account created!!");
 });
 
