@@ -33,5 +33,10 @@
     "email": "NewestTestUser12",
     "password": "pass",
     "id": "725de5c9"
+  },
+  {
+    "email": "testUser",
+    "password": "pass",
+    "id": "5c9a35c7"
   }
 ]

@@ -73,6 +73,8 @@ app.post("/signin", async (req, res) => {
   if (user.password !== password) {
     res.send("Invalid Password");
   }
+  req.session.userId = user.id;
+  res.send("You are signed in!");
 });
 
 app.listen(3000, () => {
