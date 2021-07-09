@@ -48,5 +48,10 @@
     "email": "flowTest@email.com",
     "password": "12223f823a12f64df869a81b9f76355870c6708030c840fe74a8a6cf7d57921f2908678d66939b9defe395d1cfda5b1e7694da315f054dc6780f1fb20825441f.02352cbd9f157f06",
     "id": "78bdbba9"
+  },
+  {
+    "email": "refactored@email.com",
+    "password": "f100f6df1d88cbb7af912b42dbb75d8f9582dbb2168e99ba8fc257a8dd1d2cf7d9e91f90996591a66e518398960df0df0c85a8cdfa9e3549e27d62005f3d07ab.0d54513d6eb19849",
+    "id": "d9995af4"
   }
 ]
