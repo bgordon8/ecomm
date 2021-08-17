@@ -59,6 +59,9 @@ router.post(
       .trim()
       .custom(async (password, { req }) => {
         const user = await usersRepo.getOneBy({ email: req.body.email });
+        if (!user) {
+          throw new Error("Invalid Password");
+        }
         const validPassword = await usersRepo.comparePassword(
           user.password,
           password
