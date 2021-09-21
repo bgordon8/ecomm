@@ -11,12 +11,22 @@ module.exports = ({ errors }) => {
             <form method="POST" enctype="multipart/form-data">
               <div class="field">
                 <label class="label">Title</label>
-                <input placeholder="Title" name="title"/>
-                ${getError(errors, "title")}
-                <input placeholder="Price" name="price"/>
-                ${getError(errors, "price")}
+                <input class="input" placeholder="Title" name="title"/>
+              </div>
+              ${getError(errors, "title")}
+
+              <div class="field">
+                <label class="label">Price</label>
+                <input class="input" placeholder="Price" name="price"/>
+              </div>
+              ${getError(errors, "price")}
+              
+              <div class="field">
+                <label class="label">Image</label>
                 <input type="file" name="image"/>
-                <button>Submit</button>
+              </div>
+              <br />
+              <button class="button is-primary">Create</button>
             </form>
       </div>
     </div>
