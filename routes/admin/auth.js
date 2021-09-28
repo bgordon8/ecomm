@@ -1,5 +1,5 @@
 const express = require("express");
-const handleErrors = require("./middleware");
+const { handleErrors } = require("./middleware");
 
 const usersRepo = require("../../repositories/users");
 const signupTemplate = require("../../views/admin/auth/signup");
