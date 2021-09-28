@@ -12,15 +12,15 @@ module.exports = ({ errors }) => {
               <div class="field">
                 <label class="label">Title</label>
                 <input class="input" placeholder="Title" name="title"/>
-              </div>
-              ${getError(errors, "title")}
-
-              <div class="field">
+                <p class="help is-danger">${getError(errors, "title")}</p>
+                </div>
+                
+                <div class="field">
                 <label class="label">Price</label>
                 <input class="input" placeholder="Price" name="price"/>
+                <p class="help is-danger">${getError(errors, "price")}</p>
               </div>
-              ${getError(errors, "price")}
-              
+
               <div class="field">
                 <label class="label">Image</label>
                 <input type="file" name="image"/>
