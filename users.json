@@ -53,5 +53,10 @@
     "email": "refactored@email.com",
     "password": "f100f6df1d88cbb7af912b42dbb75d8f9582dbb2168e99ba8fc257a8dd1d2cf7d9e91f90996591a66e518398960df0df0c85a8cdfa9e3549e27d62005f3d07ab.0d54513d6eb19849",
     "id": "d9995af4"
+  },
+  {
+    "email": "testthis@email.com",
+    "password": "c222a89f64385cc84a8ca5ffdc8281f2ee3cc8ea0afda7c542bab133396f25550be0ac488726f8c515709d00a64454957b74745660ea91446ae342fa8b694f2b.27f6997b076ac36f",
+    "id": "832f3eeb"
   }
 ]
