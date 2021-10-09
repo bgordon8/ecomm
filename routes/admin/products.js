@@ -34,6 +34,8 @@ router.post(
   }
 );
 
-router.get("/admin/products/:id/edit");
+router.get("/admin/products/:id/edit", (req, res) => {
+  console.log(req.params.id);
+});
 
 module.exports = router;
