@@ -34,4 +34,6 @@ router.post(
   }
 );
 
+router.get("/admin/products/:id/edit");
+
 module.exports = router;
