@@ -35,7 +35,7 @@ router.post(
 );
 
 router.get("/admin/products/:id/edit", (req, res) => {
-  console.log(req.params.id);
+  const product = await productsRepo.getOne(req.params.id)
 });
 
 module.exports = router;
