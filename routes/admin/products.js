@@ -45,6 +45,13 @@ router.get("/admin/products/:id/edit", requireAuth, async (req, res) => {
   res.send(productsEditTemplate({ product }));
 });
 
-router.post("/admin/product/:id/edit", requireAuth, async (req, res) => {});
+router.post(
+  "/admin/product/:id/edit",
+  requireAuth,
+  upload.single("image"),
+  [requireTitle, requirePrice],
+  handleErrors(productsEditTemplate),
+  async (req, res) => {}
+);
 
 module.exports = router;
