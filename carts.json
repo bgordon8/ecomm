@@ -3,14 +3,18 @@
     "items": [
       {
         "id": "62b582ba",
-        "quanity": 2
+        "quantity": 2
       },
       {
         "id": "ac3d7258",
-        "quanity": 1
+        "quantity": 1
       },
       {
         "id": "e7fccbd5",
+        "quantity": 1
+      },
+      {
+        "id": "9317ff17",
         "quantity": 1
       }
     ],
